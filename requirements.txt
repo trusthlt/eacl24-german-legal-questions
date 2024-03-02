@@ -1,0 +1,14 @@
+pandas==2.2.0
+rouge==1.0.1
+sentence-transformers==2.2.2
+evaluate==0.4.1
+openai==0.28.0
+tiktoken==0.5.2
+nltk==3.8.1
+bert-score==0.3.13
+transformers==4.37.0
+scikit-learn==1.4.0
+torch==2.1.2
+numpy==1.26.3
+requests==2.31.0
+tqdm==4.66.1

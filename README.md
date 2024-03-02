@@ -10,11 +10,13 @@ Usage Restrictions: The data hosted in this repository is strictly for non-comme
 
 ## Repository setup:
 
-### Python files:
+### Python files and to what parts of the paper they belong:
+*Data scraping*
 - multi_thread_data_scraper.py
     - Part of the papers Data scraping section (File 1/1)
     - This file was used to scrape the raw data for our dataset 
 
+*Retrieving relevant paragraphs (document retrieval)*
 - doc_retrieval_sentence_transformers_baselines.py
     - Part of paper's Document Retrieval Section (File 1/2)
     - This file is used to calculate the F1, Precision, Recall, MRR and MAP scores of a Hugging Face sentence transformers model against the bgb_eval dataset for the task of document retrieval
@@ -23,6 +25,7 @@ Usage Restrictions: The data hosted in this repository is strictly for non-comme
     - Part of paper's Document Retrieval Section (File 2/2)
     - This file is used to calculate the F1, Precision, Recall, MRR and MAP scores of the openAI GPT-3.5-turbo model against the bgb_eval dataset for the task of document retrieval
 
+*answer generation*
 - answer_generation_prep.py:
     - Part of the paper's Answer Generation Section (File 1/2)
     - This file queries OpenAI's GPT-3.5-turbo model to generate answers based on the layperson's questions and relevant paragraphs
@@ -32,7 +35,7 @@ Usage Restrictions: The data hosted in this repository is strictly for non-comme
     - We calculate the upper, lower borders and the actual model performance for our ROUGE, BERTScore.
 
 
-### Data and datasets:
+## Data and datasets:
 Files in the data subfolder:
 - GerLayQA.json
     - Primary dataset with questions and answers targeting at the German BGB
@@ -48,7 +51,17 @@ Files in the data subfolder:
     - Dataset with questions and answers targeting at the German StGB
 - zpo_QA.json
     - Dataset with questions and answers targeting at the German ZPO
+- data_points_ag.json
+    - this file is used within the answer generation part
+    - it is an extended version to the bgb_eval.json with additionally properties for already created answers and rephrased layer's answers both by the LLM GPT-3.5-turbo model
 
 
+## Requirements
+- see the requirements.txt file
 
+## How to run
+- All files are python scripts that can be run via the cmd line with an installed python instance
 
+## Accessing the results of the scripts
+- The metrics calculated within the results are displayed after running the experiments within the command line
+- As some scripts also do modify (or add) files, you can take a look at the script to see what files are used as output

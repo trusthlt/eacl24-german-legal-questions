@@ -63,13 +63,13 @@ class DataPoint:
         return f"Schreibe diesen Text um, aber behalte alle Informationen! \n {self.gold_answer}"
 
 
-with open("./data_points.json", "r") as f:
+with open("./data/bgb_eval_qa.json", "r") as f:
     datapoints_dicts = json.load(f)
     datapoints = [DataPoint.from_dict(dp_dict) for dp_dict in datapoints_dicts]
 
 
 def saveDatapoints():
-    with open("./data_points.json", "w") as f:
+    with open("./bgb_eval_qa.json", "w") as f:
         datapoints_dict_list = [x.data_point_to_dict() for x in datapoints]
         json.dump(datapoints_dict_list, f)
 

@@ -51,13 +51,14 @@ Files in the data subfolder:
     - Dataset with questions and answers targeting at the German StGB
 - zpo_QA.json
     - Dataset with questions and answers targeting at the German ZPO
-- data_points_ag.json
+- bgb_eval_qa.json
     - this file is used within the answer generation part
     - it is an extended version to the bgb_eval.json with additionally properties for already created answers and rephrased layer's answers both by the LLM GPT-3.5-turbo model
 
 
 ## Requirements
 - see the requirements.txt file
+- used pyhton version: 3.11.7
 
 ## How to run
 - All files are python scripts that can be run via the cmd line with an installed python instance

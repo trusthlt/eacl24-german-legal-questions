@@ -106,8 +106,8 @@ def send_to_openai_api_16k(prompt: str, max_tokens) -> str:
 
 
 def saveDatapoints():
-    'save the datapoints in data_points.json'
-    with open("./data_points.json", "w") as f:
+    'save the datapoints in bgb_eval_qa.json'
+    with open("./bgb_eval_qa.json", "w") as f:
         datapoints_dict_list = [x.data_point_to_dict() for x in datapoints]
         json.dump(datapoints_dict_list, f)
 
